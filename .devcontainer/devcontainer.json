@@ -1,0 +1,22 @@
+{
+  "name": "Substrate Node Template Dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "substrate-dev",
+  "workspaceFolder": "/usr/src/substrate-node-template",
+  "customizations":{
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+        "extensions": [
+        "rust-lang.rust-analyzer",
+        "ms-vscode.cpptools",
+        "fill-labs.dependi",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "postCreateCommand": "",
+  "runServices": [],
+  "shutdownAction": "stopCompose"
+}

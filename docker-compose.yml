@@ -1,0 +1,38 @@
+services:
+  substrate-dev:
+    image: lfern70/polkadot-sdk-dev:latest
+    ports:
+      - "30333:30333"
+      - "9933:9933"
+      - "9944:9944"
+      - "9615:9615"
+    command: ["sleep", "infinity"]
+    volumes:
+      - .:/usr/src/substrate-node-template
+
+#  build-chainspec:
+#    build:
+#      context: .
+#      target: chainspec
+#    entrypoint: ["chain-spec-builder"]
+#    command:
+#      [
+#        "create",
+#        "-t", "development",
+#        "--relay-chain", "paseo",
+#        "--para-id", "1000",
+#        "--runtime", "/target/release/wbuild/parachain-template-runtime/parachain_template_runtime.compact.compressed.wasm"
+#      ]
+#    volumes:
+#      - ./chain:/chain
+#    restart: "no" # se destruye automáticamente
+#
+#  substrate-node:
+#    build:
+#      context: .
+#      target: production
+#    ports:
+#      - "30333:30333"
+#      - "9933:9933"
+#      - "9944:9944"
+    
