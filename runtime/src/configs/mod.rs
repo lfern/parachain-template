@@ -333,5 +333,5 @@ parameter_types! {
 impl custom_pallet::Config for Runtime {
     type RuntimeEvent = RuntimeEvent;
     type CounterMaxValue = CounterMaxValue;
-    type WeightInfo = custom_pallet::weights::SubstrateWeight<Runtime>;
+    // type WeightInfo = custom_pallet::weights::SubstrateWeight<Runtime>;
 }
