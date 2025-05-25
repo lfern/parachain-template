@@ -5,7 +5,7 @@ services:
       - "30333:30333"
       - "9933:9933"
       - "9944:9944"
-      - "9615:9615"
+      # - "9615:9615"
     command: ["sleep", "infinity"]
     volumes:
       - .:/usr/src/substrate-node-template
